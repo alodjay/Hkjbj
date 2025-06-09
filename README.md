@@ -1,38 +1,49 @@
-# T-Header script
-This Bash script contains Oh-My-Zsh With, command autosuggestion, syntax highlight plugins and terminal header with own name for TERMUX. 
-## Preview of after setup completed..
-<img src="https://user-images.githubusercontent.com/28594846/42722171-e92e650c-8764-11e8-8f65-76a318c1de27.jpeg" width="200" hight="220">
+If your goal is to increase the **view count** (or play count) on a music link (like [your Radio Javan song](https://play.radiojavan.com/song/behzad-leito-sijal-chikar-kardi-(ft-sepehr-khalse-heliyom))) by simply opening or playing the link every 2 minutes, here is what you should know:
 
-## This script contains popular features
+---
 
-- [x] oh-my-zsh themes
-- [x] zsh-autosuggest-command plugins
-- [x] zsh-syntax-highlighting plugins
-- [x] termux-banner
-- [x] PS1 with custom trim path indicator
-- [x] Custom prompt cursor
-- [ ] other (git prompt)
+### 1. **How Play/View Counting Usually Works**
+- Most platforms (like Radio Javan, YouTube, Spotify, etc.) count unique plays/views based on user sessions, cookies, device IDs, IP addresses, or even logged-in accounts.
+- Repeatedly opening the link from the same device/browser within a short period may **not** always increase the public view count, as platforms often have protections to prevent artificial inflation.
 
-## Termux keyboard features with shortcuts
+---
 
-- [x] open new session `CTRL + t`
-- [x] close terminal <sub><sub><img src="https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/keyboard/materialsymbolsoutlined/keyboard_20px.svg"></sub></sub> swipe up throughout that icon
-- [x] swich between two sessions `CTRL + 4` and `CTRL + 5`
-- [x] other shortcuts need video guide.
+### 2. **Manual Method**
+- You can manually open the link in your browser, wait 2 minutes, close it, and repeat.
+- This may only increase your local session count; the platform may not count every repeat as a new view, depending on their detection system.
 
-## Download and installation steps
-<img src="https://user-images.githubusercontent.com/28594846/42721978-6b90278c-8761-11e8-97f2-eca4f86e837f.jpeg" width="200" hight="220">
+---
 
+### 3. **Automated Method (For Learning Purposes)**
+If you’re a developer and want to automate this for **testing** (not for violating terms of service!), you could use a script. Here’s a simple **Python example** for educational purposes:
 
-1. `apt update && yes | apt upgrade && apt update && apt install git -y`
-2. `git clone https://github.com/remo7777/T-Header.git`
-3. `cd T-Header/`
-4. `ls`
-5. `bash t-header.sh`
-6. after complete all processing just --open new session-- or `source ~/.zshrc`
-7. For remove tool `cd ~/T-header && bash t-header.sh --remove && exit`
-#
-Video guide available on YouTube channel { [Remo773 T-Bag](https://youtu.be/8Duxj_-b4og) }
+```python
+import webbrowser
+import time
 
-if anybody have created video guide on YouTube then contact with me. i ll add channel link here. -my Telegram group link [Termux-New-User](https://t.me/joinchat/FY2amVKlBrBQIi3dT_lUug)
-## Don't try without cloning...
+url = "https://play.radiojavan.com/song/behzad-leito-sijal-chikar-kardi-(ft-sepehr-khalse-heliyom)"
+
+while True:
+    webbrowser.open(url)
+    time.sleep(120)  # Wait 2 minutes (120 seconds)
+```
+
+- **Note:** Most browsers will open a new tab each time, which can quickly become overwhelming.
+- **Ethics:** Repeatedly opening a link to artificially increase play/view counts can violate the platform’s rules.
+
+---
+
+### 4. **Mobile App (Android/iOS)**
+- You could make a simple app to open a URL every 2 minutes, but app stores may reject apps for this purpose.
+- This method will face the same counting protections as above.
+
+---
+
+### 5. **Summary**
+- Simply refreshing or replaying the link every 2 minutes doesn’t guarantee an increase in official view/play counts.
+- Most services have protections against this kind of behavior.
+- Always respect the platform’s terms of service.
+
+---
+
+**If you’d like code for a particular platform (Android, iOS, desktop), or want to understand how real view counting works on a service, let me know!**
